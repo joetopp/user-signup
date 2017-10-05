@@ -6,22 +6,28 @@
     <body>
         <h1>Signup</h1>
         <form action="/welcome" method="POST">
-            <label>Username
-                <input name="username" type="text" />
-            </label>
-            <br/>
-            <label>Password
-                <input name ="password" type="password" />
-            </label>
-            <br/>
-            <label>Verify Password
-                <input name ="verify" type="password" />
-            </label>
-            <br/>
-            <label>Email (optional)
-                <input name ="email" type="text" />
-            </label>
-            <br/>
+            <table>
+                <tr>
+                    <td><label for="user">Username</label></td>
+                    <td><input name="username" type="text" id="user" /></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="pass">Password</label></td>
+                    <td><input name ="password" type="password" id="pass" /></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="verif">Verify Password</label></td>
+                    <td><input name ="verify" type="password" id="verif" /></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email (optional)</label></td>
+                    <td><input name ="email" type="text" id="email" /></td>
+                    <td></td>
+                </tr>
+            </table>
             <input type ="submit" />
         </form>
     </body>
