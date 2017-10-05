@@ -51,6 +51,6 @@ def feedback():
     if namerr == "" and paserr =="" and vererr == "" and mailerr == "":
         return redirect("/welcome?username=" + username)
 
-    return render_template('base.html', namerr=namerr, paserr=paserr, vererr=vererr, mailerr=mailerr)
+    return render_template('base.html', namerr=namerr, paserr=paserr, vererr=vererr, mailerr=mailerr, username=cgi.escape(username), email=cgi.escape(email))
 
 app.run()
