@@ -5,27 +5,43 @@
     </head>
     <body>
         <h1>Signup</h1>
-        <form action="/welcome" method="POST">
+        <form action="/" method="POST">
             <table>
                 <tr>
                     <td><label for="user">Username</label></td>
                     <td><input name="username" type="text" id="user" /></td>
-                    <td></td>
+                    <td>
+                        {% if namerr %}
+                            <p class='error'>{{ namerr }}</p>
+                        {% endif %}
+                    </td>
                 </tr>
                 <tr>
                     <td><label for="pass">Password</label></td>
                     <td><input name ="password" type="password" id="pass" /></td>
-                    <td></td>
+                    <td>
+                        {% if paserr %}
+                            <p class='error'>{{ paserr }}</p>
+                        {% endif %}
+                    </td>
                 </tr>
                 <tr>
                     <td><label for="verif">Verify Password</label></td>
                     <td><input name ="verify" type="password" id="verif" /></td>
-                    <td></td>
+                    <td>
+                        {% if vererr %}
+                            <p class='error'>{{ vererr }}</p>
+                        {% endif %}
+                    </td>
                 </tr>
                 <tr>
                     <td><label for="email">Email (optional)</label></td>
                     <td><input name ="email" type="text" id="email" /></td>
-                    <td></td>
+                    <td>
+                        {% if mailerr %}
+                            <p class='error'>{{ mailerr }}</p>
+                        {% endif %}
+                    </td>
                 </tr>
             </table>
             <input type ="submit" />
