@@ -29,6 +29,23 @@ def feedback():
     mailerr = ""
 
     #TODO: Build out error messages
+    if username == "":
+        namerr = "You must enter a username"
+    elif username.find(" ") != -1 or len(username) < 3:
+        namerr = "That's not a valid username"
+
+    if password == "":
+        paserr = "You must enter a password"
+    elif password.find(" ") != -1 or len(password) < 3:
+        paserr = "That's not a valid password"
+    
+    if verify == "":
+        vererr = "You must verify your password"
+    elif verify != password:
+        vererr = "Passwords don't match"
+
+    if email != "" and email.find("@") == -1 and email.find(".") == -1:
+        mailerr = "That's not a valid email"
 
     #If there are no errors, go to the welcome screen
     if namerr == "" and paserr =="" and vererr == "" and mailerr == "":
